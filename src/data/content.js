@@ -3,9 +3,9 @@ export const profile = {
   role: "QA Engineer",
   affiliation: "Final-year Computer Engineering, IIUI",
   location: "Islamabad, Pakistan",
-  email: "your.email@example.com",
+  email: "amnataj675@gmail.com",
   linkedin: "https://www.linkedin.com/in/amna-taj-06475142b",
-  github: "https://github.com/your-handle",
+  github: "https://github.com/amnataj",
   statusTag: "Open to QA / SDET roles",
 };
 
