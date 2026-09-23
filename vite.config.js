@@ -6,5 +6,5 @@ import { defineConfig } from 'vite'
 // If your repo IS <username>.github.io (a user/org page), set base to "/".
 export default defineConfig({
   plugins: [react()],
-  base: "/portfolio/",
+  base: "/amna-qa-portfolio/",
 })
