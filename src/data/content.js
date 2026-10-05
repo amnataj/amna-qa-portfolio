@@ -6,7 +6,7 @@ export const profile = {
   email: "amnataj675@gmail.com",
   linkedin: "https://www.linkedin.com/in/amna-taj-06475142b",
   github: "https://github.com/amnataj",
-  statusTag: "Open to QA / SDET roles",
+  statusTag: "Open to QA roles",
 };
 
 export const hero = {
