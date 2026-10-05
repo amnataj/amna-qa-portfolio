@@ -6,7 +6,7 @@ export const profile = {
   email: "amnataj675@gmail.com",
   linkedin: "https://www.linkedin.com/in/amna-taj-06475142b",
   github: "https://github.com/amnataj",
-  statusTag: "Open to QA roles",
+  statusTag: "Open to QA / SDET roles",
 };
 
 export const hero = {
@@ -17,7 +17,7 @@ export const hero = {
 
 export const testCases = [
   {
-    id: "TC-01",
+    id: "PRJ-01",
     title: "Coleman Furniture \u2014 E-commerce Regression Suite",
     status: "Active",
     objective:
@@ -29,7 +29,7 @@ export const testCases = [
     tags: ["Manual QA", "Regression", "A/B test QA", "Live production"],
   },
   {
-    id: "TC-02",
+    id: "PRJ-02",
     title: "SIFAS \u2014 Inventory Forecasting Dashboard",
     status: "Complete",
     objective:
@@ -41,7 +41,7 @@ export const testCases = [
     tags: ["Test design", "Data validation", "Dashboard QA"],
   },
   {
-    id: "TC-03",
+    id: "PRJ-03",
     title: "osTicket \u2014 Enterprise Documentation",
     status: "Complete",
     objective:
@@ -51,6 +51,19 @@ export const testCases = [
     result:
       "Produced enterprise-ready documentation that doubles as a manual test reference for the platform's core workflows.",
     tags: ["Documentation", "Workflow testing"],
+  },
+  {
+    id: "PRJ-04",
+    title: "Playwright E2E Test Automation Framework",
+    status: "Complete",
+    objective:
+      "Build an automated end-to-end UI test framework for an e-commerce site covering login, cart, and checkout flows, and run it automatically in CI.",
+    method:
+      "Python, Pytest, and Playwright using the Page Object Model; reusable fixtures for login and cart setup; data-driven tests with parametrization and JSON test data; positive and negative scenarios including form validation and order-total checks; parallel execution with pytest-xdist; screenshots, video, and traces captured on failure.",
+    result:
+      "15 automated tests running through GitHub Actions on every push, pull request, and nightly schedule, with HTML reports and failure traces published as artifacts. Debugged a parallel-run failure caused by base URL configuration and fixed it with a session-scoped fixture.",
+    tags: ["Playwright", "Pytest", "Page Object Model", "GitHub Actions", "CI/CD"],
+    link: "https://github.com/amnataj/playwright-qa-framework",
   },
 ];
 
@@ -83,10 +96,10 @@ export const bugLog = [
 ];
 
 export const environment = [
-  { group: "Automation", tools: ["Selenium", "Python"] },
+  { group: "Automation", tools: ["Selenium", "Playwright", "Pytest", "Python"] },
   { group: "Data & backend validation", tools: ["SQL", "MySQL"] },
   { group: "API & performance", tools: ["Postman", "JMeter"] },
-  { group: "Process & tracking", tools: ["Git", "Jira"] },
+  { group: "Process & tracking", tools: ["Git", "GitHub Actions", "Jira"] },
 ];
 
 export const otherWork = {
