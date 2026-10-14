@@ -2,11 +2,11 @@ import { testCases } from "../data/content";
 
 export default function TestCases() {
   return (
-    <section className="block" id="test-cases">
+    <section className="block" id="projects">
       <div className="wrap">
         <div className="block-head">
           <span className="index">01</span>
-          <h2>Test cases</h2>
+          <h2>Projects</h2>
         </div>
         <p className="block-head desc">
           Projects, written up the way I'd log any piece of testing work: what I set out to verify, how, and what came of it.
@@ -41,6 +41,20 @@ export default function TestCases() {
                   <span className="tag" key={t}>{t}</span>
                 ))}
               </div>
+
+              {tc.link && (
+                <p className="case-link-row">
+                  <a
+                    className="case-link"
+                    href={tc.link}
+                    target="_blank"
+                    rel="noreferrer"
+                    style={{ textDecoration: "underline" }}
+                  >
+                    View on GitHub →
+                  </a>
+                </p>
+              )}
             </div>
           </article>
         ))}

@@ -117,3 +117,33 @@ footer .foot-head { font-size: 1.5rem; font-weight: 700; margin: 0 0 18px; max-w
 
 a:focus-visible, button:focus-visible { outline: 2px solid var(--pass); outline-offset: 2px; }
 @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+.test-case-card {
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  padding: 1rem 1.25rem;
+  margin-bottom: 1rem;
+}
+.test-case-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.test-case-id { font-family: monospace; color: #666; }
+.result-badge {
+  padding: 2px 8px;
+  border-radius: 4px;
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+.result-badge.pass { background: #e6f4ea; color: #1e7b34; }
+.result-badge.fail { background: #fdecea; color: #c62828; }
+.test-case-project { color: #888; font-size: 0.85rem; margin-top: -0.5rem; }
+.test-case-field { margin-top: 0.5rem; }
+.priority-tag {
+  display: inline-block;
+  margin-top: 0.75rem;
+  font-size: 0.8rem;
+  background: #f0f0f0;
+  padding: 2px 8px;
+  border-radius: 4px;
+}
