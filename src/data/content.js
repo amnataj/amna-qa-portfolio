@@ -142,15 +142,15 @@ export const otherWork = {
 
 export const coverage = [
   {
+    when: "Current role",
+    what: "QA Trainee, Renegade",
+  },
+  {
     when: "2022 \u2014 present",
     what: "Final-year Computer Engineering, International Islamic University Islamabad",
   },
   {
     when: "Internship",
     what: "Database management, Entracloud",
-  },
-  {
-    when: "Interview",
-    what: "Campus hiring interview for a QA role at Nayatel \u2014 debrief identified concrete gaps in migration procedures and networking, now folded back into study.",
   },
 ];
