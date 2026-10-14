@@ -6,7 +6,7 @@ export const profile = {
   email: "amnataj675@gmail.com",
   linkedin: "https://www.linkedin.com/in/amna-taj-06475142b",
   github: "https://github.com/amnataj",
-  statusTag: "Open to QA / SDET roles",
+  statusTag: "Open to QA roles",
 };
 
 export const hero = {
@@ -65,6 +65,19 @@ export const testCases = [
     tags: ["Playwright", "Pytest", "Page Object Model", "GitHub Actions", "CI/CD"],
     link: "https://github.com/amnataj/playwright-qa-framework",
   },
+  {
+    id: "PRJ-05",
+    title: "Petstore API Test Automation",
+    status: "Complete",
+    objective:
+      "Build an automated API test suite for the Swagger Petstore covering the pet, store, and user endpoints, and run it automatically in CI.",
+    method:
+      "Python, pytest, and requests with a reusable API client class and request logging; fixtures that create and clean up their own data so tests never depend on each other; JSON schema validation of pet, order, and user responses; positive and negative scenarios across all three endpoint groups.",
+    result:
+      "25 automated tests (23 passing, 2 documented spec deviations kept as strict xfail tests so the suite stays green and the bugs stay visible), running through GitHub Actions on every push with a downloadable HTML report.",
+    tags: ["API testing", "Python", "pytest", "requests", "JSON Schema", "GitHub Actions"],
+    link: "https://github.com/amnataj/petstore-api-tests",
+  },
 ];
 
 export const bugLog = [
@@ -93,12 +106,28 @@ export const bugLog = [
       "The \u201cClick here\u201d call-to-action on product reviews is a <span>, not an <a href>. It's not keyboard-focusable and fails basic accessibility checks.",
     note: "Found during a keyboard-only navigation pass; logged alongside three other unlinked-element cases from a site-wide href audit.",
   },
+  {
+    id: "BUG-004",
+    title: "Petstore: invalid status filter returns 200 instead of 400",
+    severity: "Low",
+    summary:
+      "GET /pet/findByStatus?status=invalid returns 200 OK, but the API spec documents a 400 Invalid status value response for this case.",
+    note: "Found by the Petstore API suite and kept as a strict xfail test, so it stays visible without turning the pipeline red.",
+  },
+  {
+    id: "BUG-005",
+    title: "Petstore: pet created without required fields",
+    severity: "Medium",
+    summary:
+      "POST /pet with required fields missing returns 200 OK and creates the pet without a name or photoUrls, where the spec documents a 405 Invalid input response.",
+    note: "Found by the Petstore API suite and kept as a strict xfail test, so it stays visible without turning the pipeline red.",
+  },
 ];
 
 export const environment = [
   { group: "Automation", tools: ["Selenium", "Playwright", "Pytest", "Python"] },
   { group: "Data & backend validation", tools: ["SQL", "MySQL"] },
-  { group: "API & performance", tools: ["Postman", "JMeter"] },
+  { group: "API & performance", tools: ["Postman", "Requests", "JMeter"] },
   { group: "Process & tracking", tools: ["Git", "GitHub Actions", "Jira"] },
 ];
 
