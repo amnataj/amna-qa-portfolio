@@ -78,6 +78,19 @@ export const testCases = [
     tags: ["API testing", "Python", "pytest", "requests", "JSON Schema", "GitHub Actions"],
     link: "https://github.com/amnataj/petstore-api-tests",
   },
+  {
+    id: "PRJ-06",
+    title: "JMeter Performance Testing: Flight Booking Flow",
+    status: "Complete",
+    objective:
+      "Measure how a web application behaves under normal, steadily increasing, and sudden traffic, and check the results against targets set in advance (95th percentile under 2 seconds, error rate under 1%).",
+    method:
+      "Apache JMeter test plan for a four-step booking flow on a demo flight-booking site, with CSV-driven passenger data, page-content and response-time assertions, think-time timers, and request timeouts; load (20 users), stress (ramp to 60 users), and spike (50 users in 5 seconds) scenarios run from the command line, with HTML dashboard reports.",
+    result:
+      "All three scenarios met both targets: 95th percentile of 672 ms (load), 545 ms (stress), and 948 ms (spike), with error rates of 0%, 0.09%, and 0.81%. Every failure was a response slower than 3 seconds, and the spike run showed a temporary mid-run slowdown that recovered on its own. Findings and the limits of the test are documented in the repo.",
+    tags: ["JMeter", "Performance testing", "Load testing", "Stress testing", "Spike testing"],
+    link: "https://github.com/amnataj/jmeter-performance-tests",
+  },
 ];
 
 export const bugLog = [
