@@ -91,6 +91,19 @@ export const testCases = [
     tags: ["JMeter", "Performance testing", "Load testing", "Stress testing", "Spike testing"],
     link: "https://github.com/amnataj/jmeter-performance-tests",
   },
+  {
+    id: "PRJ-07",
+    title: "Cart & Checkout: Jest + TypeScript Test Suite",
+    status: "Complete",
+    objective:
+      "Build a unit, integration, and mock-based test suite for a TypeScript cart and checkout service (Node.js and Express), with coverage gates enforced in CI.",
+    method:
+      "Jest with ts-jest and TypeScript; data-driven tests with it.each for discounts, shipping, tax, and quantity edge cases; typed mocks (jest.Mocked) for payment and inventory dependencies; fake timers to test exponential-backoff retries without real waiting; Supertest integration tests for status codes, the error contract, and stock side effects; a custom matcher (toBeValidOrder), snapshot tests, and test data factories.",
+    result:
+      "78 tests across unit and integration layers with about 100% line coverage. Rollback behaviour is tested (stock is released when reservation or payment fails, and declined payments are not retried), and 500 responses are checked so internal errors never leak. Coverage thresholds (90% statements, lines, and functions; 85% branches) fail the build, and GitHub Actions runs typecheck and coverage on Node 20 and 22 with JUnit reports uploaded as artifacts.",
+    tags: ["Jest", "ts-jest", "TypeScript", "Supertest", "Express", "GitHub Actions"],
+    link: "https://github.com/amnataj/cart-jest-project",
+  },
 ];
 
 export const bugLog = [
@@ -138,7 +151,7 @@ export const bugLog = [
 ];
 
 export const environment = [
-  { group: "Automation", tools: ["Selenium", "Playwright", "Pytest", "Python"] },
+  { group: "Automation", tools: ["Selenium", "Playwright", "Pytest", "Jest", "Python"] },
   { group: "Data & backend validation", tools: ["SQL", "MySQL"] },
   { group: "API & performance", tools: ["Postman", "Requests", "JMeter"] },
   { group: "Process & tracking", tools: ["Git", "GitHub Actions", "Jira"] },
